@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+.sunny-day, .dawn, .nigth{
+  display: grid;
+}
+.kitten-medium{
+  grid-area: kmedium;
+}
+.kitten-small{
+  grid-area: ksmall;
+}
+.kitten-large{
+  grid-area: klarge;
+}
+@media screen and (min-width:1281px){
+  .sunny-day {
+    background-image: url("../assets/images/sunny-day.jpg");
+    margin: 0;
+    max-width: 1680px;
+    height: 1050px;
+    width: 100%;
+    grid-template-areas:
+      "ksmall kmedium klarge"
+  }
+  .kitten-medium{
+    margin-top: 80%;
+  }
+  .kitten-large, .kitten-small{
+    display: none;
+  }
+}
+@media screen and (max-width:1280px) and (min-width:901px){
+    .nigth{
+      background-image: url("../assets/images/night.jpg");
+      margin: 0;
+      max-width: 1280px;
+      height: 720px;
+      width: 100%;
+      grid-template-areas:
+        "klarge ksmall kmedium"
+    }
+    .kitten-small{
+      margin-left: 10%;
+      margin-top: 65%;
+    }
+    .kitten-large, .kitten-medium{
+      display: none;
+    }
+}
+@media screen and (max-width:900px){
+    .dawn{
+      background-image: url("../assets/images/dawn.png");
+      margin: 0;
+      max-width: 900px;
+      height: 506px;
+      width: 100%;
+      grid-template-areas:
+        "ksmall klarge kmedium"
+    }
+    .kitten-large{
+      margin-top: 30%;
+    }
+    .kitten-small, .kitten-medium{
+      display: none;;
+    }
+}
